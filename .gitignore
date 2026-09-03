@@ -1,0 +1,9 @@
+.venv/
+chroma_db/
+__pycache__/
+*.pyc
+.env
+.python-version
+*.egg-info/
+.pytest_cache/
+user_document/*.pdf
