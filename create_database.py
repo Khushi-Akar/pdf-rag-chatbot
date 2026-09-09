@@ -7,10 +7,11 @@ from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_community.vectorstores import Chroma 
 from dotenv import load_dotenv
+from langchain_groq import ChatGroq
 
 load_dotenv()
 
-data = PyPDFLoader("document loaders/deeplearning.pdf")
+data = PyPDFLoader("user_document/deeplearning.pdf")
 docs = data.load()
 
 splitter = RecursiveCharacterTextSplitter(

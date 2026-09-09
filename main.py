@@ -3,6 +3,7 @@ from langchain_mistralai import ChatMistralAI
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_community.vectorstores import Chroma
+from langchain_groq import ChatGroq
 
 load_dotenv()
 embedding_model = HuggingFaceEmbeddings(
@@ -23,7 +24,7 @@ retriever=vectorstore.as_retriever(
 
     }
 )
-llm = ChatMistralAI(model = "mistral-small-2506")
+llm = ChatGroq(model="openai/gpt-oss-20b")
 #prompt template
 prompt=ChatPromptTemplate.from_messages([("system","""You are a helpful AI assistant.
 
